@@ -1,0 +1,12 @@
+model:
+  name: Customized("my_model", "custom_cnn")
+  path: my_weights.pth
+data:
+  dataset: MNIST
+  start: 0 # 0번째 이미지부터
+  end: 5 # 5개 샘플만 테스트
+specification:
+  norm: .inf
+  epsilon: 0.05 # 픽셀값의 최대 5% perturbation 허용
+bab:
+  timeout: 60
